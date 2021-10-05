@@ -46,8 +46,8 @@ exports.calledMaryContact = async (req, res) => {
 exports.likeBurritosContact = async (req, res) => {
   try {
     const foodToSearch = "burritos";
-    let x = req.query;
-    console.log("ccc", x);
+    // let { limit } = req.query;
+    // console.log("the result is limited to two contact", limit);
     const burritosContacts = await Contact.find({
       favoriteFoods: { $in: foodToSearch },
     })
